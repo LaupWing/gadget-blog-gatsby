@@ -9,8 +9,11 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import { useLocation } from "@gatsbyjs/reach-router"
 
 const Layout = ({ children }) => {
+   const test = useLocation()
+   console.log(test)
    const data = useStaticQuery(graphql`
       query SiteTitleQuery {
          site {
