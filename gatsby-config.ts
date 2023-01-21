@@ -9,8 +9,8 @@
  */
 module.exports = {
    siteMetadata: {
-      title: `Gatsby Default Starter`,
-      description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+      title: `Tech-Heaven`,
+      description: `The latest technical innovations are covered in news, reviews, and opinions in the "Tech Heaven" technology and gadget blog. Our objective is to help readers make informed purchasing decisions by providing in-depth reviews, real-world examples, and comprehensive comparisons. We also make an effort to explain complex scientific concepts simply while presenting the most recent technological advancements and news.`,
       author: `@gatsbyjs`,
       siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
    },
