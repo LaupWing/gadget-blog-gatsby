@@ -17,6 +17,7 @@ const config: GatsbyConfig  = {
       siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
    },
    plugins: [
+      `gatsby-plugin-layout`,
       `gatsby-plugin-postcss`,
       `gatsby-plugin-image`,
       {
