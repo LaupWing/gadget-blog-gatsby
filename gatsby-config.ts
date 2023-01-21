@@ -11,7 +11,7 @@ module.exports = {
    siteMetadata: {
       title: `Tech-Heaven`,
       description: `The latest technical innovations are covered in news, reviews, and opinions in the "Tech Heaven" technology and gadget blog. Our objective is to help readers make informed purchasing decisions by providing in-depth reviews, real-world examples, and comprehensive comparisons. We also make an effort to explain complex scientific concepts simply while presenting the most recent technological advancements and news.`,
-      author: `@gatsbyjs`,
+      author: `@laupwing`,
       siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
    },
    plugins: [
