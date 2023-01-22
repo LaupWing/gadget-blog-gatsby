@@ -6,7 +6,7 @@ interface State {
 }
 
 const DarkModeContext = createContext<State>({
-   darkMode:true,
+   darkMode: true,
    setDarkMode: () => {}
 }) 
 
