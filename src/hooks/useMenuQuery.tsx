@@ -22,6 +22,10 @@ const useMenuQuery = () => {
          }
       }
    `)
-   return data
+   return data.wpMenu.menuItems.nodes.map((item: {url: string})=>({
+      ...item,
+      url: item.url.includes("http") ? "/" : item.url
+
+   }))
 }
 export default useMenuQuery
