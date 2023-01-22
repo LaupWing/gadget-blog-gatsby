@@ -24,6 +24,7 @@ const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
    return (
       <div className={`w-screen h-screen ${darkMode ? "bg-neutral-900" : "bg-neutral-100"} overflow-y-auto flex flex-col duration-700 transition-all relative`}>
          <Header />
+         <main>{children}</main>
          <div
             style={{
                margin: `0 auto`,
@@ -31,7 +32,6 @@ const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
                padding: `var(--size-gutter)`,
             }}
          >
-            <main>{children}</main>
             <footer
                style={{
                   marginTop: `var(--space-5)`,
