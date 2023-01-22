@@ -13,11 +13,11 @@
       "esModuleInterop": true,
       "noUnusedLocals": false,
       "allowJs": true,
-      "paths": {
-         "~/*": [
-            "./src/*"
-         ]
-      }
+      // "paths": {
+      //    "~/*": [
+      //       "./src/*"
+      //    ]
+      // }
    },
    "exclude": [
       "node_modules",

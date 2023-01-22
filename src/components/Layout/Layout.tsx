@@ -10,8 +10,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 // import Header from "./header"
 import { useLocation } from "@gatsbyjs/reach-router"
+import useDarkMode from "../../hooks/useDarkMode"
 
 const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
+   const {darkMode } = useDarkMode()
    // const test = useLocation()
    const data = useStaticQuery(graphql`
       query SiteTitleQuery {
