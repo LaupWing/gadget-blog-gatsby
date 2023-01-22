@@ -47,7 +47,7 @@ const config: GatsbyConfig  = {
       {
          resolve: `gatsby-source-wordpress`,
          options: {
-            url: `https://tech-heaven.laupwing.site/graphql`
+            url: `https://laupwing.site/graphql`
          }
       },
       {
