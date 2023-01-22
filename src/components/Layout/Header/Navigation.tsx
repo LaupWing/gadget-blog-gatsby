@@ -1,9 +1,49 @@
+import { useLocation } from "@gatsbyjs/reach-router"
+import { Link } from "gatsby"
 import * as React from "react"
+import {FiChevronDown} from "react-icons/fi"
 import useMenuQuery from "../../../hooks/useMenuQuery"
+
+interface MenuItem {
+   id: string
+   parentId: string
+   url: string
+   label: string
+   childItems:{
+      nodes: string[]
+   }
+}
 
 const Navigation = () => {
    const menu = useMenuQuery()
+   const location = useLocation()
+   const isBlog = (item: string) => item.includes("blog") && location.pathname.includes("blog")
    console.log(menu)
-   return <div>Navigation</div>
+   return (
+      <ul className="flex text-neutral-600 capitalize text-sm font-bold space-x-10 tracking-tighter">
+         {/* {menu.map((item: MenuItem) => 
+            !item.parentId && 
+               <div
+                  className="relative group"
+                  key={item.id}
+               >
+                  <Link
+                     to={item.url}
+                     className={`flex items-center relative py-1 ${
+                        isBlog(item.url) ? "text-indigo-600" : "hover:text-indigo-600"
+                     }`}
+                  >
+                     <li>{item.label}</li>
+                     {item.childItems.nodes.length > 0 && (
+                        <FiChevronDown 
+                           className="duration-200 ml-2 transform group-hover:rotate-180"
+                           size={16}
+                        />
+                     )}
+                  </Link>
+               </div>
+         )} */}
+      </ul>
+   )
 }
 export default Navigation

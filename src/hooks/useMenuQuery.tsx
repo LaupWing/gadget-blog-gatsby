@@ -22,7 +22,6 @@ const useMenuQuery = () => {
          }
       }
    `)
-   console.log(data)
-   return "test"
+   return data
 }
 export default useMenuQuery
