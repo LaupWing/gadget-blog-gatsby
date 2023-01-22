@@ -13,17 +13,17 @@ import { useLocation } from "@gatsbyjs/reach-router"
 
 const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
    // const test = useLocation()
-   // const data = useStaticQuery(graphql`
-   //    query SiteTitleQuery {
-   //       site {
-   //          siteMetadata {
-   //             title
-   //             description
-   //          }
-   //       }
-   //    }
-   // `)
-   // console.log(data)
+   const data = useStaticQuery(graphql`
+      query SiteTitleQuery {
+         site {
+            siteMetadata {
+               title
+               description
+            }
+         }
+      }
+   `)
+   console.log(data)
 
    return (
       <>
