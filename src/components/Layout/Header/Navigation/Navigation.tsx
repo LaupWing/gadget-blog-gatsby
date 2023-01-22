@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import * as React from "react"
 import {FiChevronDown} from "react-icons/fi"
 import useMenuQuery from "../../../../hooks/useMenuQuery"
+import Dropdown, { DropdownItem } from "./Dropdown"
 
 interface MenuItem {
    id: string
@@ -10,7 +11,7 @@ interface MenuItem {
    url: string
    label: string
    childItems:{
-      nodes: string[]
+      nodes: DropdownItem[]
    }
 }
 
@@ -40,6 +41,9 @@ const Navigation = () => {
                            size={16}
                         />
                      )}
+                     {item.childItems.nodes.length > 0 && <Dropdown
+                        items={item.childItems.nodes}
+                     />}
                   </Link>
                </div>
          )}
