@@ -28,7 +28,7 @@ const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
    console.log(data)
 
    return (
-      <div className="w-screen h-screen bg-neutral-900 overflow-y-auto flex flex-col duration-700 transition-all relative">
+      <div className={`w-screen h-screen ${darkMode ? "bg-neutral-900" : "bg-neutral-100"} overflow-y-auto flex flex-col duration-700 transition-all relative`}>
          {/* <Header /> */}
          <div
             style={{
