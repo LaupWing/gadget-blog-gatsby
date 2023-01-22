@@ -10,4 +10,4 @@ https://www.youtube.com/watch?v=zaV41KpiDGk
       - Extendeds are hogi.laupwing.site
       = To go to the admin you need to go to hog.laupwing.site/admin
    = To add another sub domain you need to go to the _hostinger_ site
-      - 
+      - Hosting -> domains -> subdomains
