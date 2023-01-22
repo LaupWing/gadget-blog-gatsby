@@ -1,4 +1,4 @@
-import React, { createContext, useState, Dispatch, SetStateAction } from "react"
+import React, { createContext, useState, Dispatch, SetStateAction, useContext } from "react"
 
 interface State {
    darkMode: boolean
@@ -19,4 +19,8 @@ export const DarkModeProvider:React.FC<React.PropsWithChildren> = ({ children })
          {children}
       </DarkModeContext.Provider>
    )
+}
+
+export default function useDarkMode() {
+   return useContext(DarkModeContext)
 }
