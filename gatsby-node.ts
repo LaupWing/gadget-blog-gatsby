@@ -7,9 +7,10 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
+import { CreatePagesArgs } from "gatsby"
 import path from "path"
 
-exports.createPages = async ({ actions }) => {
+export const createPages = async ({ actions }: CreatePagesArgs) => {
    const { createPage } = actions
    createPage({
       path: "/using-dsg",
