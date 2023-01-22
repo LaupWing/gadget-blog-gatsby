@@ -18,10 +18,10 @@ const Navigation = () => {
    const menu = useMenuQuery()
    const location = useLocation()
    const isBlog = (item: string) => item.includes("blog") && location.pathname.includes("blog")
-   console.log(menu)
+
    return (
       <ul className="flex text-neutral-600 capitalize text-sm font-bold space-x-10 tracking-tighter">
-         {/* {menu.map((item: MenuItem) => 
+         {menu.map((item: MenuItem) => 
             !item.parentId && 
                <div
                   className="relative group"
@@ -42,7 +42,7 @@ const Navigation = () => {
                      )}
                   </Link>
                </div>
-         )} */}
+         )}
       </ul>
    )
 }
