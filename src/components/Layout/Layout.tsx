@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 // import Header from "./header"
 import { useLocation } from "@gatsbyjs/reach-router"
 import useDarkMode from "../../hooks/useDarkMode"
+import Header from "./Header/Header"
 
 const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
    const {darkMode } = useDarkMode()
@@ -29,7 +30,7 @@ const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
 
    return (
       <div className={`w-screen h-screen ${darkMode ? "bg-neutral-900" : "bg-neutral-100"} overflow-y-auto flex flex-col duration-700 transition-all relative`}>
-         {/* <Header /> */}
+         <Header />
          <div
             style={{
                margin: `0 auto`,
