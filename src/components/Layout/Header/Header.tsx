@@ -2,6 +2,7 @@ import * as React from "react"
 import { BiMenu } from "react-icons/bi"
 import useDarkMode from "../../../hooks/useDarkMode"
 import Logo from "./Logo"
+import Navigation from "./Navigation"
 
 const Header = () => {
    const { darkMode } = useDarkMode()
@@ -22,9 +23,7 @@ const Header = () => {
                <Logo />
             </div>
             <nav className="sm:flex hidden">
-               {/* <Navigation 
-               location={location}
-            /> */}
+               <Navigation />
             </nav>
          </header>
       </div>
