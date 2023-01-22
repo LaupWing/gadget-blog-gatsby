@@ -2,7 +2,7 @@ import * as React from "react"
 import { BiMenu } from "react-icons/bi"
 import useDarkMode from "../../../hooks/useDarkMode"
 import Logo from "./Logo"
-import Navigation from "./Navigation"
+import Navigation from "./Navigation/Navigation"
 
 const Header = () => {
    const { darkMode } = useDarkMode()

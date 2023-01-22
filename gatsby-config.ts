@@ -54,7 +54,7 @@ const config: GatsbyConfig  = {
          resolve: `gatsby-plugin-google-fonts`,
          options: { 
             fonts: [
-               `Teko\:200, 400, 500, 600, 700`
+               `Open Sans\:200, 400, 500, 600, 700`
             ],
             display: `swap`
          }

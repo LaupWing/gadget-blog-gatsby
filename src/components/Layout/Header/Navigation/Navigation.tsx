@@ -2,7 +2,7 @@ import { useLocation } from "@gatsbyjs/reach-router"
 import { Link } from "gatsby"
 import * as React from "react"
 import {FiChevronDown} from "react-icons/fi"
-import useMenuQuery from "../../../hooks/useMenuQuery"
+import useMenuQuery from "../../../../hooks/useMenuQuery"
 
 interface MenuItem {
    id: string
