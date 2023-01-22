@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const SideContainer:React.FC<React.PropsWithChildren> = ({ children }) => {
+const SlideContainer:React.FC<React.PropsWithChildren> = ({ children }) => {
    return (
       <div className="flex relative height-[60vh]">
          <div className="container flex my-4">
@@ -9,4 +9,4 @@ const SideContainer:React.FC<React.PropsWithChildren> = ({ children }) => {
       </div>
    )
 }
-export default SideContainer
+export default SlideContainer
