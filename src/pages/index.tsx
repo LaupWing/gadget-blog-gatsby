@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout/Layout"
 import Seo from "../components/seo"
+import Slideshow from "../components/Slideshow/Slideshow"
 
 const links = [
    {
@@ -70,6 +71,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
    <Layout>
+      <Slideshow/>
       {/* <div>
          <StaticImage
             src="../images/example.png"
