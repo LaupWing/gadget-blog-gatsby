@@ -1,12 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-export const useLatestBlogQuery = () =>{
+export const useLatestBlogQuery = () => {
    const data = useStaticQuery(graphql`
       query {
-         allWpPost(
-            sort: { fields: date, order: DESC }
-            limit: 4
-         ){
+         allWpPost(limit: 4, sort: { date: DESC }) {
             nodes {
                uri
                title
@@ -19,7 +16,7 @@ export const useLatestBlogQuery = () =>{
                   node {
                      localFile {
                         childImageSharp {
-                        gatsbyImageData(width: 720, placeholder: TRACED_SVG)
+                           gatsbyImageData(width: 720, placeholder: TRACED_SVG)
                         }
                      }
                   }
