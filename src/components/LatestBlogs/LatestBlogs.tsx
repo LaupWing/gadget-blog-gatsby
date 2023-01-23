@@ -1,6 +1,7 @@
 import { useLatestBlogQuery } from "../../hooks/useLatestBlogQuery"
 import * as React from "react"
 import BlogPreview from "../BlogPreview/BlogPreview"
+import { BlogType } from "../../../types"
 
 const LatestBlogs = () => {
    const data = useLatestBlogQuery()
