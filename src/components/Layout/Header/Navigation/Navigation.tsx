@@ -41,10 +41,10 @@ const Navigation = () => {
                            size={16}
                         />
                      )}
-                     {item.childItems.nodes.length > 0 && <Dropdown
-                        items={item.childItems.nodes}
-                     />}
                   </Link>
+                  {item.childItems.nodes.length > 0 && <Dropdown
+                     items={item.childItems.nodes}
+                  />}
                </div>
          )}
       </ul>
