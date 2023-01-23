@@ -8,7 +8,7 @@ import Slideshow from "../components/Slideshow/Slideshow"
 const IndexPage = () => (
    <Layout>
       <Slideshow/>
-      {/* <LatestBlogs/> */}
+      <LatestBlogs/>
    </Layout>
 )
 
