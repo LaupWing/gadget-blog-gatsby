@@ -5,7 +5,9 @@ export type BlogType = {
    dateGmt: string
    excerpt: string
    featuredImage: {
-      node: ImageDataLike
+      node: {
+         localFile: ImageDataLike
+      }
    }
    slug: string
    title: string

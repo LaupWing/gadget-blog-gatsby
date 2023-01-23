@@ -9,7 +9,7 @@ const LatestBlogs = () => {
    return (
       <div className="container py-10">
          <h2 className="text-white text-2xl font-bold">Latest blogs</h2>
-         <div className="grid sm:grid-cols-2 grid-cols-1 my-5">
+         <div className="grid sm:grid-cols-2 grid-cols-1 my-5 gap-3">
             {data.allWpPost.nodes.map((x:any) => (
                <BlogPreview
                   data={x}
