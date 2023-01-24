@@ -11,6 +11,13 @@ const PostPreview:React.FC<{data: BlogType}> = ({data}) => {
             alt="Preview image"
             className="aspect-[6/4]"
          />
+         <time className="group-hover:text-indigo-600 text-neutral-200 absolute top-3 right-3 uppercase text-xs font-bold z-20" dateTime={data.dateGmt}>
+            {data.date}
+         </time>
+         <h1 className="py-2 group-hover:text-indigo-500 text-neutral-400 font-bold text-md">
+            {data.title}
+         </h1>
+         
       </div>
    )
 }
