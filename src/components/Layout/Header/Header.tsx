@@ -10,8 +10,8 @@ const Header = () => {
    return (
       <div
          className={`${
-            darkMode ? "bg-neutral-900" : "bg-neutral-100"
-         } duration-200 sticky top-0 z-40`}
+            darkMode ? "bg-neutral-900/10" : "bg-neutral-100/10"
+         } duration-200 sticky top-0 z-40 backdrop-blur-lg`}
       >
          <header className="container py-10 flex justify-between">
             <div
