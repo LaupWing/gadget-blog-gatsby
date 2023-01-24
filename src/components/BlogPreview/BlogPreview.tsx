@@ -17,7 +17,9 @@ const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
          <h1 className="py-2 group-hover:text-indigo-500 text-neutral-400 font-bold text-md">
             {data.title}
          </h1>
-
+         <div
+            className="line-clamp-2 text-sm text-neutral-600 font-bold"
+         />
       </div>
    )
 }
