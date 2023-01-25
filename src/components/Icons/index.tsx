@@ -2,21 +2,26 @@ import * as React from "react"
 import { BsFillLaptopFill } from "react-icons/bs"
 import { FaHeadphones, FaMobile, FaTablet } from "react-icons/fa"
 
-const Icons = (props: any) => {
+interface Props extends Record<string, unknown> {
+   name: string
+}
+
+const Icons:React.FC<Props> = ({ name,...props}) => {
+   const _name = name.toLowerCase()
    return (
       <>
-         <BsFillLaptopFill
+         {_name === "laptops" && <BsFillLaptopFill
             {...props}
-         />
-         <FaTablet
+         />}
+         {_name === "tablets" && <FaTablet
             {...props}
-         />
-         <FaMobile
+         />}
+         {_name === "phones" && <FaMobile
             {...props}
-         />
-         <FaHeadphones
+         />}
+         {_name === "headphones" && <FaHeadphones
             {...props}
-         />
+         />}
       </>
    )
 }

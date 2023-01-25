@@ -1,11 +1,17 @@
 import { getImage, GatsbyImage, } from "gatsby-plugin-image"
 import * as React from "react"
 import { BlogType } from "../../../types"
+import Icons from "../Icons"
 
 const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
-   console.log(data.categories)
    return (
       <div className="flex flex-col rounded p-1.5 relative border-transparent border-2 hover:border-neutral-700 group duration-150 cursor-pointer col-span-1">
+         <div className="absolute group-hover:text-indigo-500 duration-150 z-50 p-2 text-neutral-200">
+            <Icons
+               size={35}
+               name={data.categories.nodes[0].name}
+            />
+         </div>
          <GatsbyImage
             image={getImage(data.featuredImage.node.localFile)!}
             alt="Preview image"
