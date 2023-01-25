@@ -9,6 +9,11 @@ export type BlogType = {
          localFile: ImageDataLike
       }
    }
+   categories: {
+      nodes: {
+         name: string
+      }[]
+   }
    slug: string
    title: string
    uri: string

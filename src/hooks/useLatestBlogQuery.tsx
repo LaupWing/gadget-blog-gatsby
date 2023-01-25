@@ -12,6 +12,11 @@ export const useLatestBlogQuery = () => {
                slug
                dateGmt
                date(fromNow: true)
+               categories {
+                  nodes {
+                     name
+                  }
+               }
                featuredImage {
                   node {
                      localFile {
