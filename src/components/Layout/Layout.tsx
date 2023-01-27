@@ -2,13 +2,11 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 // import Header from "./header"
-import { useLocation } from "@gatsbyjs/reach-router"
 import useDarkMode from "../../hooks/useDarkMode"
 import Header from "./Header/Header"
 
 const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
    const {darkMode } = useDarkMode()
-   // const test = useLocation()
    const data = useStaticQuery(graphql`
       query SiteTitleQuery {
          site {
@@ -19,7 +17,6 @@ const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
          }
       }
    `)
-   console.log(data)
 
    return (
       <div className={`w-screen h-screen ${darkMode ? "bg-neutral-900" : "bg-neutral-100"} overflow-y-auto flex flex-col duration-700 transition-all relative`}>

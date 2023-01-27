@@ -17,16 +17,18 @@ interface Props {
 }
 
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
-   console.log(data)
+   console.log(pageContext)
    return (
       <Layout>
-         <StaticImage
-            src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            placeholder="tracedSVG"
-            width={1920}
-            height={300}
-            alt="Blog Hero"
-         />
+         <div className="relative">
+            <StaticImage
+               src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+               placeholder="tracedSVG"
+               width={1920}
+               height={300}
+               alt="Blog Hero"
+            />
+         </div>
          <div className="container grid sm:grid-cols-2 grid-cols-1 my-5 gap-y-10 gap-x-4">
             {data.allWpPost.edges.map((x) => (
                <BlogPreview
