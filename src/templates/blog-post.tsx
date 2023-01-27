@@ -17,7 +17,7 @@ interface Props {
 }
 
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
-   console.log(pageContext)
+   
    return (
       <Layout>
          <div className="relative">
