@@ -1,10 +1,10 @@
 import Layout from "../layouts"
 
-const Blog = () => {
+const BlogPost = () => {
    return (
       <Layout>
          
       </Layout>
    )
 }
-export default Blog
+export default BlogPost
