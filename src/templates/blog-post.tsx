@@ -28,6 +28,11 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                height={300}
                alt="Blog Hero"
             />
+            <div className="absolute inset-0 flex items-center justify-center flex-1 bg-white/60 backdrop-blur-sm z-50">
+               <h2 className="uppercase text-2xl text-center tracking-wider">
+                  {pageContext.category.node.name}
+               </h2>
+            </div>
          </div>
          <div className="container grid sm:grid-cols-2 grid-cols-1 my-5 gap-y-10 gap-x-4">
             {data.allWpPost.edges.map((x) => (
