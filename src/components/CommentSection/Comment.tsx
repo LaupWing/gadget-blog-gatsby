@@ -13,3 +13,11 @@ const Comment = ({comment, setReply, reply}:any) => {
    )
 }
 export default Comment
+
+const CommentContent = ({comment, avatarSize, className=""}:any) => {
+   return (
+      <div className={"flex-1 flex " + className}>
+
+      </div>
+   )
+}
