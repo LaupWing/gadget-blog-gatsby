@@ -3,7 +3,23 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../components/Layout/Layout"
 
-const BlogPost = () => {
+interface Props {
+   data: {
+      edges: {
+         node:{
+            date: string
+            excerpt: string,
+            id: string,
+            slug: string,
+            title: string,
+            uri: string,
+         }
+      }[]
+   }
+}
+
+const BlogPost:React.FC<Props> = ({data}) => {
+   console.log(data)
    return (
       <Layout>
          <StaticImage
