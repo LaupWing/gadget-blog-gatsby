@@ -4,6 +4,7 @@ import * as React from "react"
 import Layout from "../components/Layout/Layout"
 import { BlogType } from "../../types"
 import BlogPreview from "../components/BlogPreview/BlogPreview"
+import Icons from "../components/Icons"
 
 interface Props {
    data: {
@@ -28,9 +29,14 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                height={300}
                alt="Blog Hero"
             />
-            <div className="absolute inset-0 flex items-center justify-center flex-1 bg-white/60 backdrop-blur-sm z-50">
-               <h2 className="uppercase text-2xl text-center tracking-wider">
+            <div className="absolute inset-0 flex items-center justify-center flex-1 bg-white/60 backdrop-blur-sm z-20">
+               <h2 className="uppercase text-2xl text-center tracking-wider flex">
                   {pageContext.category.node.name}
+                  <Icons 
+                     name={pageContext.category.node.name} 
+                     size={30}
+                     className="ml-2"
+                  />
                </h2>
             </div>
          </div>
