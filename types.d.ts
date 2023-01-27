@@ -19,3 +19,13 @@ export type BlogType = {
    uri: string
    id: string
 }
+
+export interface Category {
+   node :{
+      count: number
+      id: string
+      slug: string
+      uri: string
+      name: string
+   }
+}

@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout"
 import { BlogType } from "../../types"
 import BlogPreview from "../components/BlogPreview/BlogPreview"
 import Icons from "../components/Icons"
+import CategoryNav from "../components/CategoryNav"
 
 interface Props {
    data: {
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
-   
+   console.log(pageContext)
    return (
       <Layout>
          <div className="relative">
@@ -39,6 +40,9 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                   />
                </h2>
             </div>
+         </div>
+         <div>
+            <CategoryNav categories={pageContext.allCategories.edges.filter((x:any)=>x.name !== "Uncategorized")}/>
          </div>
          <div className="container grid sm:grid-cols-2 grid-cols-1 my-5 gap-y-10 gap-x-4">
             {data.allWpPost.edges.map((x) => (
