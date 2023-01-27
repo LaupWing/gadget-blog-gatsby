@@ -27,13 +27,13 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
             height={300}
             alt="Blog Hero"
          />
-         <div className="grid sm:grid-cols-2 grid-cols-1 my-5 gap-y-10 gap-x-4">
-            {/* {data.edges.map((x) => (
+         <div className="container grid sm:grid-cols-2 grid-cols-1 my-5 gap-y-10 gap-x-4">
+            {data.allWpPost.edges.map((x) => (
                <BlogPreview
                   data={x.node}
                   key={x.node.id}
                />
-            ))} */}
+            ))}
          </div>
       </Layout>
    )

@@ -9,7 +9,7 @@ const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
          <div className="absolute group-hover:text-indigo-500 duration-150 z-50 p-2 text-neutral-200">
             <Icons
                size={35}
-               name={data.categories.nodes[0].name}
+               name={data.categories.nodes.filter(x => x.name !== "All Posts")[0].name}
             />
          </div>
          <GatsbyImage
