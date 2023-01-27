@@ -1,3 +1,4 @@
+import Avatar from "boring-avatars"
 import * as React from "react"
 
 const Comment = ({comment, setReply, reply}:any) => {
@@ -8,7 +9,10 @@ const Comment = ({comment, setReply, reply}:any) => {
             : "border-neutral-200"}`
          }
       >
-         Comment
+         <CommentContent
+            comment={comment}
+            avatarSize={60}
+         />
       </div>
    )
 }
@@ -17,7 +21,11 @@ export default Comment
 const CommentContent = ({comment, avatarSize, className=""}:any) => {
    return (
       <div className={"flex-1 flex " + className}>
-
+         <Avatar
+            size={avatarSize}
+            name={comment.author.node.name}
+            variant={"beam"}
+         />
       </div>
    )
 }
