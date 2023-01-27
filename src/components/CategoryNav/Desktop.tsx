@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import * as React from "react"
 import { Category } from "../../../types"
+import Icons from "../Icons"
 
 const Desktop:React.FC<{categories: Category[]}> = ({categories}) => {
    return (
@@ -15,7 +16,7 @@ const Desktop:React.FC<{categories: Category[]}> = ({categories}) => {
                   activeClassName='text-indigo-600 active'
                >
                   <li className='text-sm uppercase font-bold'>{x.node.name}</li>
-                
+                  <Icons className="ml-10" name={x.node.name}/>
                </Link>
             ))}
          </ul>

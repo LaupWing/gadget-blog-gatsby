@@ -41,16 +41,16 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                </h2>
             </div>
          </div>
-         <div>
-            <CategoryNav categories={pageContext.allCategories.edges.filter((x:any)=>x.name !== "Uncategorized")}/>
-         </div>
-         <div className="container grid sm:grid-cols-2 grid-cols-1 my-5 gap-y-10 gap-x-4">
-            {data.allWpPost.edges.map((x) => (
-               <BlogPreview
-                  data={x.node}
-                  key={x.node.id}
-               />
-            ))}
+         <div className="flex container my-5 space-x-4">
+            <CategoryNav categories={pageContext.allCategories.edges.filter((x:any)=>x.node.name !== "Uncategorized")}/>
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-4">
+               {data.allWpPost.edges.map((x) => (
+                  <BlogPreview
+                     data={x.node}
+                     key={x.node.id}
+                  />
+               ))}
+            </div>
          </div>
       </Layout>
    )
