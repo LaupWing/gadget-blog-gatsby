@@ -5,7 +5,7 @@ import Icons from "../Icons"
 
 const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
    return (
-      <div className="flex flex-col rounded p-1.5 relative border-transparent border-2 hover:border-neutral-700 group duration-150 cursor-pointer col-span-1">
+      <article className="flex flex-col rounded p-1.5 relative border-transparent border-2 hover:border-neutral-700 group duration-150 cursor-pointer col-span-1">
          <div className="absolute group-hover:text-indigo-500 duration-150 z-50 p-2 text-neutral-200">
             <Icons
                size={35}
@@ -23,13 +23,13 @@ const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
          >
             {data.date}
          </time>
-         <h1 className="py-2 group-hover:text-indigo-500 text-neutral-400 font-bold text-md">
+         <h2 className="py-2 group-hover:text-indigo-500 text-neutral-400 font-bold text-md">
             {data.title}
-         </h1>
+         </h2>
          <div
             className="line-clamp-2 text-sm text-neutral-600 font-bold"
          />
-      </div>
+      </article>
    )
 }
 export default BlogPreview
