@@ -60,6 +60,7 @@ export const createPages = async ({ actions, graphql, reporter }: CreatePagesArg
                   skip: i * postsPerPage,
                   numberOfPages,
                   currentPage: i + 1,
+                  categoryId: category.node.id,
                   category,
                   allCategories: allWpCategory
                }
