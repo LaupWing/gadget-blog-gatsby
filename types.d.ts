@@ -17,4 +17,5 @@ export type BlogType = {
    slug: string
    title: string
    uri: string
+   id: string
 }
