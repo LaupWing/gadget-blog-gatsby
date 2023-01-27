@@ -2,18 +2,12 @@ import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../components/Layout/Layout"
+import { BlogType } from "../../types"
 
 interface Props {
    data: {
       edges: {
-         node:{
-            date: string
-            excerpt: string,
-            id: string,
-            slug: string,
-            title: string,
-            uri: string,
-         }
+         node: BlogType
       }[]
    }
 }
@@ -53,12 +47,27 @@ export const pageQuery = graphql`
       ){
          edges {
             node {
-               id
+               uri
                title
                excerpt
-               uri
+               id
                slug
-               date(formatString: "DD MM YYYY")
+               dateGmt
+               date(fromNow: true)
+               categories {
+                  nodes {
+                     name
+                  }
+               }
+               featuredImage {
+                  node {
+                     localFile {
+                        childImageSharp {
+                           gatsbyImageData(width: 720, placeholder: TRACED_SVG)
+                        }
+                     }
+                  }
+               }
             }
          }
       }
