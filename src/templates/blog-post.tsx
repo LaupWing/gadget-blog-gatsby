@@ -1,11 +1,18 @@
 import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../components/Layout/Layout"
 
 const BlogPost = () => {
    return (
       <Layout>
-         
+         <StaticImage
+            src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            placeholder="tracedSVG"
+            width={1920}
+            height={300}
+            alt="Blog Hero"
+         />
       </Layout>
    )
 }
