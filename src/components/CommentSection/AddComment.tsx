@@ -129,9 +129,11 @@ const AddComment = ({ post, reply, setReply }: any) => {
             <input
                type="email"
                className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-violet-500 text-sm"
-               value={email}
-               onChange={e => setEmail(e.target.value)}
+               {...register("email", {
+                  required: "You need to enter a email!"
+               })}
             />
+            {errors["email"] && <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">{errors["email"].message}</p>}
          </div>
          <div className="flex flex-col my-2">
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Website</h3>
