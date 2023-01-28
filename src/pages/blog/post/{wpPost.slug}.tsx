@@ -4,11 +4,10 @@ import BreadCrumbs from "../../../components/BreadCrumbs"
 import Layout from "../../../components/Layout/Layout"
 
 const BlogPost = ({data}:any) => {
-   console.log(data)
    return (
       <Layout>
          <article className="container">
-            <BreadCrumbs parents={data.post.categories.nodes}/>
+            <BreadCrumbs parents={data.post.categories.nodes.slice(0, 2)}/>
          </article>
       </Layout>
    )
