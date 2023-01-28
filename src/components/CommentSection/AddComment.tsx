@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
-import { Store } from "react-notifications-component"
 
 type FormData = {
    comment: string
@@ -40,15 +39,15 @@ const AddComment = ({ post, reply, setReply }: any) => {
          author_url: form.website,
          content: form.comment,
       })
-      Store.addNotification({
-         title: "Info",
-         message: "We need to approve this comment first, because of how wordpress comment works. I will approve it no matter what you commented! Free speech for all",
-         type: "info",
-         insert: "top",
-         container: "top-center",
-         animationIn: ["animate__animated", "animate__fadeIn"],
-         animationOut: ["animate__animated", "animate__fadeOut"],
-      })
+      // Store.addNotification({
+      //    title: "Info",
+      //    message: "We need to approve this comment first! Please be patients!",
+      //    type: "info",
+      //    insert: "top",
+      //    container: "top-center",
+      //    animationIn: ["animate__animated", "animate__fadeIn"],
+      //    animationOut: ["animate__animated", "animate__fadeOut"],
+      // })
    })
    return (
       <form
