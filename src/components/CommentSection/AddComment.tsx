@@ -58,7 +58,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
    return (
       <form
          onSubmit={handleSubmit}
-         className={`w-full p-5 bg-white shadow-hard-lg border rounded-2xl ${
+         className={`w-full p-5 bg-white border-2 shadow-hard-lg rounded-2xl ${
             reply 
                ? "border-violet-600" 
                : "border-black"
