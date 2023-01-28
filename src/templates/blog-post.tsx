@@ -5,6 +5,7 @@ import { BlogType } from "../../types"
 import BlogPreview from "../components/BlogPreview/BlogPreview"
 import Icons from "../components/Icons"
 import CategoryNav from "../components/CategoryNav"
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 
 interface Props {
    data: {
@@ -68,7 +69,17 @@ const Pagination = ({categoriUri, currentPage, numberOfPages}:any) =>{
    console.log(currentPage)
    console.log(numberOfPages)
    return (
-      <div></div>
+      <div className="flex justify-between mt-8">
+         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded">
+            <BsArrowLeftShort size={24}/>
+            Newer
+         </button>
+
+         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded">
+            Older
+            <BsArrowRightShort size={24}/>
+         </button>
+      </div>
    )
 }
 
