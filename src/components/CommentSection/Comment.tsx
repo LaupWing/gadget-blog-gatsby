@@ -25,14 +25,14 @@ const Comment = ({ comment, setReply, reply }: any) => {
          </div>
          {reply === comment ? (
             <button
-               className="ml-auto uppercase text-sm font-bold tracking-wider text-indigo-300 hover:text-indigo-600"
+               className="ml-auto uppercase text-sm font-bold tracking-wider text-violet-300 hover:text-indigo-600"
                onClick={() => setReply(false)}
             >
                Cancel Reply
             </button>
          ) : (
             <button
-               className="ml-auto uppercase text-sm font-bold tracking-wider text-indigo-300 hover:text-indigo-600"
+               className="ml-auto uppercase text-sm font-bold tracking-wider text-violet-400 hover:text-violet-500"
                onClick={() => setReply(comment)}
             >
                Reply
@@ -56,7 +56,7 @@ const CommentContent = ({ comment, avatarSize, className = "" }: any) => {
                <h3 className="font-bold uppercase text-sm">
                   {comment.author.node.name}
                </h3>
-               <p className="uppercase font-bold text-xs text-neutral-400">
+               <p className="uppercase font-bold text-xs text-neutral-300">
                   {comment.date}
                </p>
             </div>
