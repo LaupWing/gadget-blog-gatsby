@@ -12,7 +12,7 @@ const Slideshow = () => {
             placeholder="blurred"
             quality={95}
             loading="eager"
-            className="absolute inset-0 z-50 opacity-5 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             alt="Blog Hero"
          />
          <Carousel 
