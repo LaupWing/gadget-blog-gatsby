@@ -2,8 +2,8 @@ import * as React from "react"
 
 const Logo = () => {
    return (
-      <svg 
-         id="Laag_1" 
+      <svg
+         className="w-[65px] duration-800 fill-current"
          xmlns="http://www.w3.org/2000/svg" 
          viewBox="0 0 54.19 25.26"
       >
