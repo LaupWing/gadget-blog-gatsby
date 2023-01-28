@@ -68,7 +68,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             {reply ? `Reply to ${reply.author.node.name}` : "Leave a comment!"}
             {reply && (
                <button
-                  className="ml-auto text-xs uppercase font-bold bg-indigo-600 text-neutral-100 tracking-wide py-0.5 px-2 rounded hover:bg-indigo-700"
+                  className="ml-auto text-xs uppercase font-bold bg-violet-500 text-neutral-100 tracking-wide py-0.5 px-2 rounded hover:bg-violet-600"
                   onClick={() => setReply(false)}
                >
                   Cancel reply
@@ -84,7 +84,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
                Comment *
             </h3>
             <textarea
-               className="h-48 w-full p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-600"
+               className="h-48 w-full p-2 rounded focus:outline-none focus:ring-2 focus:ring-violet-600"
                onChange={e => setComment(e.target.value)}
                value={comment}
             ></textarea>
@@ -93,7 +93,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Name *</h3>
             <input
                type="text"
-               className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-indigo-500 text-sm"
+               className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-violet-500 text-sm"
                value={name}
                onChange={e => setName(e.target.value)}
             />
@@ -102,7 +102,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Email *</h3>
             <input
                type="email"
-               className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-indigo-500 text-sm"
+               className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-violet-500 text-sm"
                value={email}
                onChange={e => setEmail(e.target.value)}
             />
@@ -111,7 +111,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Website</h3>
             <input
                type="text"
-               className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-indigo-500 text-sm"
+               className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-violet-500 text-sm"
                value={website}
                onChange={e => setWebsite(e.target.value)}
             />

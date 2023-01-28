@@ -25,7 +25,7 @@ const Comment = ({ comment, setReply, reply }: any) => {
          </div>
          {reply === comment ? (
             <button
-               className="ml-auto uppercase text-sm font-bold tracking-wider text-violet-300 hover:text-indigo-600"
+               className="ml-auto uppercase text-sm font-bold tracking-wider text-violet-300 hover:text-violet-600"
                onClick={() => setReply(false)}
             >
                Cancel Reply
