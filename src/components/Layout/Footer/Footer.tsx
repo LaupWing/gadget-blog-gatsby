@@ -20,10 +20,10 @@ const Footer = () => {
                               <Link
                                  key={item.id}
                                  to={item.url}
-                                 className={`flex items-center group hover:text-indigo-600 relative py-1 ${
-                                    isBlog(item.url) ? "text-indigo-600" : ""
+                                 className={`flex items-center group hover:text-violet-600 relative py-1 ${
+                                    isBlog(item.url) ? "text-violet-600" : ""
                                  }`}
-                                 activeClassName="text-indigo-600"
+                                 activeClassName="text-violet-600"
                               >
                                  <li>{item.label}</li>
                               </Link>
