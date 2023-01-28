@@ -31,6 +31,7 @@ const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
             </h2>
             <div
                className="line-clamp-2 text-sm text-neutral-600 font-bold"
+               dangerouslySetInnerHTML={{__html:data.excerpt}}
             />
          </article>
       </Link>
