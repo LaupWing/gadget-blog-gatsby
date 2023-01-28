@@ -52,10 +52,6 @@ export const pageQuery = graphql`
                name
             }
          }
-         custom_post_fields {
-            types
-            headerPosition
-         }
          date(formatString: "DD MM YYYY")
          featuredImage {
             node {
