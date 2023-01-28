@@ -12,7 +12,10 @@ const BreadCrumbs:React.FC<{parent?:{
          <span>/</span>
          {parent && (
             <>
-               <Link to={parent.uri}/>
+               <Link to={parent.uri}>
+                  test
+               </Link>
+               <span>/</span>
             </>
          )}
       </div>

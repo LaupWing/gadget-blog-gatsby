@@ -1,12 +1,15 @@
 import { graphql } from "gatsby"
 import * as React from "react"
+import BreadCrumbs from "../../../components/BreadCrumbs"
 import Layout from "../../../components/Layout/Layout"
 
 const BlogPost = ({data}:any) => {
    console.log(data)
    return (
       <Layout>
-         
+         <article className="container">
+            <BreadCrumbs/>
+         </article>
       </Layout>
    )
 }
