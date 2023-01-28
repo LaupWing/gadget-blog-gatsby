@@ -1,15 +1,14 @@
 import * as React from "react"
 import LatestBlogs from "../components/LatestBlogs/LatestBlogs"
 
-import Layout from "../components/Layout/Layout"
 import Seo from "../components/Seo"
 import Slideshow from "../components/Slideshow/Slideshow"
 
 const IndexPage = () => (
-   <Layout>
+   <>
       <Slideshow/>
       <LatestBlogs/>
-   </Layout>
+   </>
 )
 
 /**

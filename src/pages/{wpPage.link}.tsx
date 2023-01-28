@@ -4,11 +4,9 @@ import Layout from "../components/Layout/Layout"
 
 const PageTemplate = () => {
    return (
-      <Layout>
-         <main className="container">
-            <BreadCrumbs/>
-         </main>
-      </Layout>
+      <main className="container">
+         <BreadCrumbs/>
+      </main>
    )
 }
 export default PageTemplate
