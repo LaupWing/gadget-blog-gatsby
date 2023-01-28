@@ -5,10 +5,10 @@ import Navigation from "./Navigation/Navigation"
 
 const Header = () => {
    return (
-      <div
-         className={"bg-white sticky top-0 z-40 backdrop-blur-lg"}
+      <header
+         className={"bg-white border-b-2 border-black sticky top-0 z-40 backdrop-blur-lg"}
       >
-         <header className="container py-10 flex justify-between">
+         <div className="container py-10 flex justify-between">
             <div
                className={`text-neutral-900 flex items-center`}
             >
@@ -18,8 +18,8 @@ const Header = () => {
             <nav className="sm:flex hidden">
                <Navigation />
             </nav>
-         </header>
-      </div>
+         </div>
+      </header>
    )
 }
 export default Header

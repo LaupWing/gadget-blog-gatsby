@@ -5,7 +5,6 @@ import { BlogType } from "../../../types"
 import Icons from "../Icons"
 
 const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
-   console.log(data)
    return (
       <Link to={`/blog/post${data.uri}`}>
          <article className="flex flex-col rounded p-1.5 relative border-transparent border-2 hover:border-neutral-700 group duration-150 cursor-pointer col-span-1">
