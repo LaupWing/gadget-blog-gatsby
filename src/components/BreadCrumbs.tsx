@@ -5,11 +5,16 @@ const BreadCrumbs:React.FC<{parent?:{
    uri: string
 }}> = ({parent}) => {
    return (
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 text-white text-sm font-bold tracking-tighter">
          <Link to="/">
             Home
          </Link>
-         {parent && <Link to={parent.uri}/>}
+         <span>/</span>
+         {parent && (
+            <>
+               <Link to={parent.uri}/>
+            </>
+         )}
       </div>
    )
 }
