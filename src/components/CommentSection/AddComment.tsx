@@ -9,9 +9,6 @@ type FormData = {
 }
 
 const AddComment = ({ post, reply, setReply }: any) => {
-   const [name, setName] = useState("")
-   const [email, setEmail] = useState("")
-   const [website, setWebsite] = useState("")
 
    const {
       register,
@@ -27,55 +24,9 @@ const AddComment = ({ post, reply, setReply }: any) => {
       }
    })
 
-   const onSubmit = async (e:any) => {
-      e.preventDefault()
-      // const data = JSON.stringify(reply ? {
-      //    post: post.databaseId,
-      //    author_name: name,
-      //    author_email: email,
-      //    author_url: website,
-      //    content: comment,
-      //    parent: reply.databaseId
-      // } : {
-      //    post: post.databaseId,
-      //    author_name: name,
-      //    author_email: email,
-      //    author_url: website,
-      //    content: comment,
-      // })
-      // try{
-      //    await fetch('https://laupwing.site/wp-json/wp/v2/comments', {
-      //       method: 'post',
-      //       headers: {
-      //          'Content-Type': 'application/json',
-      //       },
-      //       body: data,
-      //    })
-      //    Store.addNotification({
-      //       title: "Info",
-      //       message: "We need to approve this comment first, because of how wordpress comment works. I will approve it no matter what you commented! Free speech for all",
-      //       type: "info",
-      //       insert: "top",
-      //       container: "top-center",
-      //       animationIn: ["animate__animated", "animate__fadeIn"],
-      //       animationOut: ["animate__animated", "animate__fadeOut"],
-      //    })
-      //    setComment('')
-      //    setName('')
-      //    setEmail('')
-      //    setWebsite('')
-      //    setReply(false)
-      // }catch(e){
-      //    Store.addNotification({
-      //       title: "SOMETHING WENT WRONG!",
-      //       message: "Comment failed to post! We will work on it",
-      //       type: "warning",
-      //       insert: "top",
-      //       container: "top-center"
-      //     });
-      //    console.log(e)
-      // }
-   }
+   const onSubmit = handleSubmit(data => {
+      console.log(data)
+   })
    return (
       <form
          onSubmit={onSubmit}
@@ -145,7 +96,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
                {...register("website")}
             />
          </div>
-         <button className="btn mt-2 px-4 p-2">Post Comment</button>
+         <button className="btn mt-2 px-4 p-2" type="submit">Post Comment</button>
       </form>
    )
 }
