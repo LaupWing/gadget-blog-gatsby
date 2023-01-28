@@ -17,7 +17,7 @@ const BlogPost = ({ data }: any) => {
                dangerouslySetInnerHTML={{ __html: data.post.content }}
             />
          </article>
-         <div className="container">
+         <div className="container lg:px-4">
             <CommentSection post={data.post}/>
          </div>
       </section>

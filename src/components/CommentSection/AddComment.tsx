@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
+import { toast } from "react-toastify"
 
 type FormData = {
    comment: string
@@ -39,6 +40,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
          author_url: form.website,
          content: form.comment,
       })
+      toast.info("We need to approve this comment first! Please be patience!")
       // Store.addNotification({
       //    title: "Info",
       //    message: "We need to approve this comment first! Please be patients!",
