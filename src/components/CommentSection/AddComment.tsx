@@ -1,12 +1,33 @@
 import React, { useState } from "react"
+import { useForm } from "react-hook-form"
+
+type FormData = {
+   comment: string
+   name: string
+   email: string
+   website: string
+}
 
 const AddComment = ({ post, reply, setReply }: any) => {
-   const [comment, setComment] = useState("")
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
    const [website, setWebsite] = useState("")
 
-   const handleSubmit = async (e:any) => {
+   const {
+      register,
+      formState: {
+         errors
+      },
+      handleSubmit
+   }= useForm<FormData>({
+      defaultValues:{
+         comment: "",
+         email: "",
+         website: ""
+      }
+   })
+
+   const onSubmit = async (e:any) => {
       e.preventDefault()
       // const data = JSON.stringify(reply ? {
       //    post: post.databaseId,
@@ -57,7 +78,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
    }
    return (
       <form
-         onSubmit={handleSubmit}
+         onSubmit={onSubmit}
          className={`w-full p-5 bg-white border-2 shadow-hard-lg rounded-2xl ${
             reply 
                ? "border-violet-600" 
@@ -85,19 +106,23 @@ const AddComment = ({ post, reply, setReply }: any) => {
             </h3>
             <textarea
                className="h-48 w-full p-2 rounded focus:outline-none focus:ring-2 focus:ring-violet-600"
-               onChange={e => setComment(e.target.value)}
-               value={comment}
+               {...register("comment", {
+                  required: "You need to enter a comment!"
+               })}
             ></textarea>
-            <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">You need to enter a comment!</p>
+            {errors.comment && <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">{errors["comment"].message}</p>}
          </div>
          <div className="flex flex-col">
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Name *</h3>
+            
             <input
                type="text"
                className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-violet-500 text-sm"
-               value={name}
-               onChange={e => setName(e.target.value)}
+               {...register("name", {
+                  required: "You need to enter a name!"
+               })}
             />
+            {errors["name"] && <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">{errors["name"].message}</p>}
          </div>
          <div className="flex flex-col my-2">
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Email *</h3>
