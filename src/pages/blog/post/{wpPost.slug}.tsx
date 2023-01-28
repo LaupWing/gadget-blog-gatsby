@@ -8,7 +8,7 @@ const BlogPost = ({data}:any) => {
    return (
       <Layout>
          <article className="container">
-            <BreadCrumbs/>
+            <BreadCrumbs parents={data.post.categories.nodes}/>
          </article>
       </Layout>
    )
