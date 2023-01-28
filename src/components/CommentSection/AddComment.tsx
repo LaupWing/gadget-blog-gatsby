@@ -121,6 +121,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
                {...register("name", {
                   required: "You need to enter a name!"
                })}
+               aria-invalid={errors.name ? "true" : "false"} 
             />
             {errors["name"] && <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">{errors["name"].message}</p>}
          </div>
@@ -132,6 +133,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
                {...register("email", {
                   required: "You need to enter a email!"
                })}
+               aria-invalid={errors.email ? "true" : "false"} 
             />
             {errors["email"] && <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">{errors["email"].message}</p>}
          </div>
@@ -140,8 +142,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             <input
                type="text"
                className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-violet-500 text-sm"
-               value={website}
-               onChange={e => setWebsite(e.target.value)}
+               {...register("website")}
             />
          </div>
          <button className="btn mt-2 px-4 p-2">Post Comment</button>
