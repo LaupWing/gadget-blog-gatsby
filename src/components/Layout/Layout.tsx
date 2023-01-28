@@ -19,7 +19,7 @@ const Layout:React.FC<React.PropsWithChildren> = ({ children }) => {
    `)
 
    return (
-      <div className={`w-screen h-screen ${false ? "bg-neutral-900" : "bg-neutral-100"} overflow-y-auto flex flex-col duration-700 transition-all relative`}>
+      <div className="w-screen h-screen overflow-y-auto flex flex-col duration-700 transition-all relative bg-pink-200">
          <Header />
          <main>{children}</main>
          <div
