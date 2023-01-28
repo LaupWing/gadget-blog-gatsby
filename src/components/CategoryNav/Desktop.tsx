@@ -14,6 +14,7 @@ const Desktop: React.FC<{ categories: Category[] }> = ({ categories }) => {
                   to={x.node.uri}
                   className="flex items-center justify-between hover:text-violet-500 group"
                   activeClassName="text-violet-600 active"
+                  partiallyActive
                >
                   <li className="text-sm uppercase font-bold">{x.node.name}</li>
                   <Icons className="ml-10" name={x.node.name} />

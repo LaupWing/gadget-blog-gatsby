@@ -33,6 +33,7 @@ const Navigation = () => {
                      className={`flex items-center relative py-1 ${
                         isBlog(item.url) ? "text-violet-500" : "hover:text-violet-600"
                      }`}
+                     activeClassName="text-violet-500"
                   >
                      <li>{item.label}</li>
                      {item.childItems.nodes.length > 0 && (
