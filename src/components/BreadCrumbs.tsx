@@ -8,9 +8,9 @@ interface Props {
    } []
 }
 
-const BreadCrumbs:React.FC<Props> = ({parents}) => {
+const BreadCrumbs:React.FC<Props> = ({parents, ...props}) => {
    return (
-      <div className="flex space-x-4 text-white text-sm font-bold tracking-tighter">
+      <div {...props} className="flex space-x-4 text-sm font-bold tracking-tighter">
          <Link to="/">
             Home
          </Link>
