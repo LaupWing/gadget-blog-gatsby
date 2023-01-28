@@ -58,9 +58,11 @@ const AddComment = ({ post, reply, setReply }: any) => {
    return (
       <form
          onSubmit={handleSubmit}
-         className={`w-full p-5 bg-neutral-200 border ${
-            reply ? "border-indigo-600" : "border-neutral-300"
-         } rounded`}
+         className={`w-full p-5 bg-white shadow-hard-lg border rounded-2xl ${
+            reply 
+               ? "border-violet-600" 
+               : "border-black"
+         }`}
       >
          <h2 className="font-bold text-neutral-600 w-full flex items-center tracking-wider text-lg">
             {reply ? `Reply to ${reply.author.node.name}` : "Leave a comment!"}
@@ -78,7 +80,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             *
          </p>
          <div className="flex flex-col mb-5">
-            <h3 className="mb-2 text-neutral-400 font-bold text-sm">
+            <h3 className="mb-1 text-neutral-400 font-bold text-sm">
                Comment *
             </h3>
             <textarea
@@ -88,7 +90,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             ></textarea>
          </div>
          <div className="flex flex-col">
-            <h3 className="mb-2 text-neutral-400 font-bold text-sm">Name *</h3>
+            <h3 className="mb-1 text-neutral-400 font-bold text-sm">Name *</h3>
             <input
                type="text"
                className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-indigo-500 text-sm"
@@ -97,7 +99,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             />
          </div>
          <div className="flex flex-col my-2">
-            <h3 className="mb-2 text-neutral-400 font-bold text-sm">Email *</h3>
+            <h3 className="mb-1 text-neutral-400 font-bold text-sm">Email *</h3>
             <input
                type="email"
                className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-indigo-500 text-sm"
@@ -106,7 +108,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
             />
          </div>
          <div className="flex flex-col my-2">
-            <h3 className="mb-2 text-neutral-400 font-bold text-sm">Website</h3>
+            <h3 className="mb-1 text-neutral-400 font-bold text-sm">Website</h3>
             <input
                type="text"
                className="w-64 rounded tracking-wide p-2 focus:outline-none focus:ring-2 ring-indigo-500 text-sm"
