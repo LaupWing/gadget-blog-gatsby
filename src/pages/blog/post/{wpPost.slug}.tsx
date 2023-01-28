@@ -1,15 +1,30 @@
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
+import { BlogType } from "../../../../types"
 import BreadCrumbs from "../../../components/BreadCrumbs"
 import Layout from "../../../components/Layout/Layout"
 
 const BlogPost = ({data}:any) => {
    return (
       <Layout>
-         <article className="container">
+         <article className="container space-y-4">
+            <BlogPostHeader post={data.post}/>
             <BreadCrumbs parents={data.post.categories.nodes.slice(0, 2)}/>
          </article>
       </Layout>
+   )
+}
+
+const BlogPostHeader = ({post}:{post: BlogType}) =>{
+   return (
+      <div className="relative rounded overflow-hidden h-[30vh]">
+         <GatsbyImage
+            className="h-full object-contain"
+            image={getImage(post.featuredImage.node.localFile)!}
+            alt="Cover image"
+         />
+      </div>
    )
 }
 
