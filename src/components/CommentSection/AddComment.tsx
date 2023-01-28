@@ -24,8 +24,21 @@ const AddComment = ({ post, reply, setReply }: any) => {
       }
    })
 
-   const onSubmit = handleSubmit(data => {
-      console.log(data)
+   const onSubmit = handleSubmit(form => {
+      const data = JSON.stringify(reply ? {
+         post: post.databaseId,
+         author_name: form.name,
+         author_email: form.email,
+         author_url: form.website,
+         content: form.comment,
+         parent: reply.databaseId
+      } : {
+         post: post.databaseId,
+         author_name: form.name,
+         author_email: form.email,
+         author_url: form.website,
+         content: form.comment,
+      })
    })
    return (
       <form
