@@ -29,7 +29,7 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                alt="Blog Hero"
             />
             <div className="absolute inset-0 flex items-center justify-center flex-1 bg-white/60 backdrop-blur-sm z-20">
-               <h2 className="uppercase text-2xl text-center tracking-wider flex">
+               <h2 className="uppercase text-2xl text-center bg-green-300 p-2 rounded-xl shadow-hard-base font-bold px-4 border-2 border-black tracking-wider flex">
                   {pageContext.category.node.name}
                   <Icons 
                      name={pageContext.category.node.name} 

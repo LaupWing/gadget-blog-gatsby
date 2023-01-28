@@ -12,7 +12,8 @@ module.exports = {
             sans: ["Open Sans", "sans-serif"],
          },
          boxShadow:{
-            "hard-lg": "5px 5px 0px 1px rgba(0,0,0,1)"
+            "hard-lg": "5px 5px 0px 1px rgba(0,0,0,1)",
+            "hard-base": "2px 2px 0px 1px rgba(0,0,0,1)",
          }
       },
    },
