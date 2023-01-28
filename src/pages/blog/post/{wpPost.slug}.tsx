@@ -6,6 +6,7 @@ import BreadCrumbs from "../../../components/BreadCrumbs"
 import CommentSection from "../../../components/CommentSection"
 
 const BlogPost = ({ data }: any) => {
+   console.log(data.post)
    return (
       <section className="px-4">
          <article className="container shadow-hard-lg space-y-4 p-4 bg-white mt-4 rounded-2xl border-2 border-black">

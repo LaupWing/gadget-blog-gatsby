@@ -17,12 +17,14 @@ const BreadCrumbs:React.FC<Props> = ({parents, ...props}) => {
          <span>/</span>
          {parents && (
             parents.map(parent => (
-               <>
-                  <Link to={parent.uri}>
+               <div key={parent.uri} className="space-x-4">
+                  <Link 
+                     to={parent.uri}
+                  >
                      {parent.name}
                   </Link>
                   <span>/</span>
-               </>
+               </div>
             ))
          )}
       </div>
