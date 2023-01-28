@@ -4,8 +4,10 @@ import * as React from "react"
 const Comment = ({ comment, setReply, reply }: any) => {
    return (
       <div
-         className={`flex flex-col py-3 mb-4 px-2 rounded border shadow ${
-            reply === comment ? "border-indigo-600" : "border-neutral-200"
+         className={`flex flex-col bg-white py-3 mb-4 px-2 rounded shadow-hard-base border-2 ${ 
+            reply === comment 
+               ? "border-violet-600" 
+               : "border-black"
          }`}
       >
          <CommentContent comment={comment} avatarSize={60} />
