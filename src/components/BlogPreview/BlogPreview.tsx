@@ -9,7 +9,7 @@ const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
       <Link to={`/blog/post${data.uri}`}>
          <article className="flex flex-col rounded-2xl p-4 shadow-hard-lg relative border-transparent border-2 border-neutral-900 group duration-150 cursor-pointer col-span-1">
             <div className="relative rounded-xl overflow-hidden">
-               <div className="absolute group-hover:text-indigo-500 duration-150 z-50 p-2 text-neutral-200">
+               <div className="absolute group-hover:text-indigo-500 duration-150 z-50 p-2 text-yellow-400">
                   <Icons
                      size={35}
                      name={data.categories.nodes.filter(x => x.name !== "All Posts")[0].name}
@@ -21,7 +21,7 @@ const BlogPreview:React.FC<{data: BlogType}> = ({data}) => {
                   className="aspect-[6/4]"
                />
                <time 
-                  className="group-hover:text-indigo-600 text-neutral-600 absolute top-3 right-3 uppercase text-xs font-bold z-20 bg-white/80 backdrop-blur-lg px-2 py-[1px] rounded" 
+                  className="group-hover:text-indigo-600 text-neutral-900 absolute top-3 right-3 uppercase text-xs font-bold z-20 bg-yellow-400 px-2 py-[1px] rounded" 
                   dateTime={data.dateGmt}
                >
                   {data.date}
