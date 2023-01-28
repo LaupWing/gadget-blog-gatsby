@@ -8,3 +8,22 @@
 .btn {
    @apply px-4 rounded-md text-xs font-bold tracking-widest text-white py-1 bg-indigo-600 uppercase hover:bg-indigo-700
 }
+
+#wp-content p{
+   margin-bottom: 30px;
+   line-height: 26px;
+}
+#wp-content h2{
+   font-weight: 600;
+   font-size: 1.5rem;
+   margin-bottom: 6px;
+}
+
+#wp-content figure{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   font-style: italic;
+   margin-bottom: 20px;
+}
