@@ -9,6 +9,7 @@ const Comment = ({ comment, setReply, reply }: any) => {
                ? "border-violet-600" 
                : "border-black"
          }`}
+         key={comment.id}
       >
          <CommentContent comment={comment} avatarSize={60} />
          <div className="flex flex-col">
