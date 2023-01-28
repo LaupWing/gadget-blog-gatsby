@@ -5,7 +5,7 @@ import Icons from "../Icons"
 
 const Desktop: React.FC<{ categories: Category[] }> = ({ categories }) => {
    return (
-      <nav className="sm:flex flex-col pl-4 hidden">
+      <nav className="sm:flex flex-col px-4 py-6 hidden mb-auto rounded-xl bg-white border-black border-2">
          <h2 className="font-bold uppercase mb-4 text-neutral-900">Blog</h2>
          <ul className="space-y-2 flex flex-col text-neutral-400 ">
             {categories.map(x => (
