@@ -21,7 +21,7 @@ const Navigation = () => {
    const isBlog = (item: string) => item.includes("blog") && location.pathname.includes("blog")
    
    return (
-      <ul className="flex text-neutral-600 capitalize text-sm font-bold space-x-10 tracking-tighter">
+      <ul className="flex text-neutral-900 capitalize text-sm font-bold space-x-10 tracking-tighter">
          {menu.map((item: MenuItem) => 
             !item.parentId && 
                <div

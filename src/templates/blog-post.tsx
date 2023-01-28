@@ -1,7 +1,6 @@
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
-import Layout from "../components/Layout/Layout"
 import { BlogType } from "../../types"
 import BlogPreview from "../components/BlogPreview/BlogPreview"
 import Icons from "../components/Icons"
@@ -19,9 +18,8 @@ interface Props {
 }
 
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
-   console.log(pageContext)
    return (
-      <Layout>
+      <>
          <div className="relative">
             <StaticImage
                src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -52,7 +50,7 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                ))}
             </div>
          </div>
-      </Layout>
+      </>
    )
 }
 export default BlogPost
