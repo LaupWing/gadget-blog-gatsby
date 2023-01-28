@@ -31,7 +31,7 @@ const Navigation = () => {
                   <Link
                      to={item.url}
                      className={`flex items-center relative py-1 ${
-                        isBlog(item.url) ? "text-indigo-600" : "hover:text-indigo-600"
+                        isBlog(item.url) ? "text-violet-500" : "hover:text-violet-600"
                      }`}
                   >
                      <li>{item.label}</li>
