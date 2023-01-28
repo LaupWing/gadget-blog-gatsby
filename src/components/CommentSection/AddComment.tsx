@@ -88,6 +88,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
                onChange={e => setComment(e.target.value)}
                value={comment}
             ></textarea>
+            <p className="uppercase text-xs text-red-400 font-bold tracking-wider mt-1">You need to enter a comment!</p>
          </div>
          <div className="flex flex-col">
             <h3 className="mb-1 text-neutral-400 font-bold text-sm">Name *</h3>
