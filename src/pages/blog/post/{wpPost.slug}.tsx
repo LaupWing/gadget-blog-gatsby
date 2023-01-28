@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
 import { BlogType } from "../../../../types"
 import BreadCrumbs from "../../../components/BreadCrumbs"
+import CommentSection from "../../../components/CommentSection"
 
 const BlogPost = ({ data }: any) => {
    return (
@@ -16,6 +17,9 @@ const BlogPost = ({ data }: any) => {
                dangerouslySetInnerHTML={{ __html: data.post.content }}
             />
          </article>
+         <div className="container">
+            <CommentSection post={data.post}/>
+         </div>
       </section>
    )
 }

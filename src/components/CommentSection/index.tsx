@@ -1,12 +1,19 @@
-import * as React from "react"
+import React, { useState } from "react"
+import AddComment from "./AddComment"
 
-const CommentSection = () => {
+const CommentSection = ({post}:any) => {
+   const [reply, setReply] = useState(false)
    return (
       <div className="w-full flex flex-col">
          <h4 className="uppercase font-semibold text-sm text-neutral-500 mb-4">Comments</h4>
          <div className="flex flex-col">
 
          </div>
+         <AddComment 
+            post={post} 
+            reply={reply}
+            setReply={setReply}
+         />
       </div>
    )
 }
