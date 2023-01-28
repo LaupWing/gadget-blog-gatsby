@@ -6,6 +6,7 @@ import BlogPreview from "../components/BlogPreview/BlogPreview"
 import Icons from "../components/Icons"
 import CategoryNav from "../components/CategoryNav"
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
+import BreadCrumbs from "../components/BreadCrumbs"
 
 interface Props {
    data: {
@@ -19,7 +20,6 @@ interface Props {
 }
 
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
-   console.log(pageContext)
    return (
       <>
          <div className="relative">
@@ -40,6 +40,9 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
                   />
                </h2>
             </div>
+         </div>
+         <div className="container mt-4">
+            <BreadCrumbs/>
          </div>
          <div className="flex container my-5 space-x-4">
             <CategoryNav categories={pageContext.allCategories.edges.filter((x:any)=>x.node.name !== "Uncategorized")}/>
