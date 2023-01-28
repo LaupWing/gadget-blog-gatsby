@@ -11,6 +11,11 @@ const BlogPost = ({data}:any) => {
          <article className="container space-y-4">
             <BlogPostHeader post={data.post}/>
             <BreadCrumbs parents={data.post.categories.nodes.slice(0, 2)}/>
+            <div 
+               id='wp-content'
+               className="container text-neutral-700 mt-4"
+               dangerouslySetInnerHTML={{__html: data.post.content}}
+            />
          </article>
       </Layout>
    )
@@ -24,6 +29,7 @@ const BlogPostHeader = ({post}:{post: BlogType}) =>{
             image={getImage(post.featuredImage.node.localFile)!}
             alt="Cover image"
          />
+         
       </div>
    )
 }
