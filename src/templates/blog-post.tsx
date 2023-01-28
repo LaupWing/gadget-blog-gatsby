@@ -18,6 +18,7 @@ interface Props {
 }
 
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
+   console.log(pageContext)
    return (
       <>
          <div className="relative">
@@ -41,19 +42,35 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
          </div>
          <div className="flex container my-5 space-x-4">
             <CategoryNav categories={pageContext.allCategories.edges.filter((x:any)=>x.node.name !== "Uncategorized")}/>
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-4">
-               {data.allWpPost.edges.map((x) => (
-                  <BlogPreview
-                     data={x.node}
-                     key={x.node.id}
-                  />
-               ))}
+            <div className="flex-1 flex-col flex">
+               <div className="grid sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-4">
+                  {data.allWpPost.edges.map((x) => (
+                     <BlogPreview
+                        data={x.node}
+                        key={x.node.id}
+                     />
+                  ))}
+               </div>
+               <Pagination
+                  categoriUri={pageContext.category.node.uri}
+                  currentPage={pageContext.currentPage}
+                  numberOfPages={pageContext.numberOfPages}
+               />
             </div>
          </div>
       </>
    )
 }
 export default BlogPost
+
+const Pagination = ({categoriUri, currentPage, numberOfPages}:any) =>{
+   console.log(categoriUri)
+   console.log(currentPage)
+   console.log(numberOfPages)
+   return (
+      <div></div>
+   )
+}
 
 export const pageQuery = graphql`
    query($categoryId: String!, $skip: Int!, $limit: Int!){
