@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import { BlogType } from "../../types"
@@ -67,17 +67,29 @@ export default BlogPost
 const Pagination = ({categoriUri, currentPage, numberOfPages}:any) =>{
    return (
       <div className="flex justify-between mt-8 items-center">
-         <button 
-            className={"w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400 "}
+         <Link
+            to={`${categoriUri}${currentPage === 2 ? "" : currentPage -1}`}
+            className={currentPage > 1 
+               ? "opacity-100"
+               : "opacity-0 pointer-events-none"}
          >
-            <BsArrowLeftShort size={24}/>
-            Newer
-         </button>
+            <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400">
+               <BsArrowLeftShort size={24}/>
+               Newer
+            </button>
+         </Link>
          <p className="font-bold">{currentPage} / {numberOfPages}</p>
-         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400">
-            Older
-            <BsArrowRightShort size={24}/>
-         </button>
+         <Link
+            to={`${categoriUri}${currentPage + 1}`}
+            className={currentPage < numberOfPages 
+               ? "opacity-100"
+               : "opacity-0 pointer-events-none"}
+         >
+            <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400">
+               Older
+               <BsArrowRightShort size={24}/>
+            </button>
+         </Link>
       </div>
    )
 }
