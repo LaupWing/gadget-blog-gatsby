@@ -65,17 +65,14 @@ const BlogPost:React.FC<Props> = ({data, pageContext}) => {
 export default BlogPost
 
 const Pagination = ({categoriUri, currentPage, numberOfPages}:any) =>{
-   console.log(categoriUri)
-   console.log(currentPage)
-   console.log(numberOfPages)
    return (
-      <div className="flex justify-between mt-8">
-         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded">
+      <div className="flex justify-between mt-8 items-center">
+         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400">
             <BsArrowLeftShort size={24}/>
             Newer
          </button>
-
-         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded">
+         <p className="font-bold">{currentPage} / {numberOfPages}</p>
+         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400">
             Older
             <BsArrowRightShort size={24}/>
          </button>
