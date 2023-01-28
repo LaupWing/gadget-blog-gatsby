@@ -7,7 +7,7 @@ import BreadCrumbs from "../../../components/BreadCrumbs"
 const BlogPost = ({data}:any) => {
    return (
       <>
-         <article className="container space-y-4 p-4 bg-white mt-4 rounded-2xl border-2 border-black">
+         <article className="container shadow-hard-lg space-y-4 p-4 bg-white mt-4 rounded-2xl border-2 border-black">
             <BreadCrumbs parents={data.post.categories.nodes.slice(0, 2)}/>
             <BlogPostHeader post={data.post}/>
             <div 
@@ -22,7 +22,7 @@ const BlogPost = ({data}:any) => {
 
 const BlogPostHeader = ({post}:{post: BlogType}) =>{
    return (
-      <div className="relative rounded overflow-hidden h-[30vh]">
+      <div className="relative rounded-xl overflow-hidden h-[30vh]">
          <GatsbyImage
             className="h-full object-contain"
             image={getImage(post.featuredImage.node.localFile)!}
