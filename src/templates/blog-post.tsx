@@ -67,7 +67,9 @@ export default BlogPost
 const Pagination = ({categoriUri, currentPage, numberOfPages}:any) =>{
    return (
       <div className="flex justify-between mt-8 items-center">
-         <button className="w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400">
+         <button 
+            className={"w-24 py-1 shadow-hard-base flex items-center justify-center bg-teal-300 border-black border-2 font-bold rounded hover:bg-teal-400 "}
+         >
             <BsArrowLeftShort size={24}/>
             Newer
          </button>
