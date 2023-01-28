@@ -6,7 +6,7 @@ import BreadCrumbs from "../../../components/BreadCrumbs"
 
 const BlogPost = ({ data }: any) => {
    return (
-      <>
+      <section className="px-4">
          <article className="container shadow-hard-lg space-y-4 p-4 bg-white mt-4 rounded-2xl border-2 border-black">
             <BreadCrumbs parents={data.post.categories.nodes.slice(0, 2)} />
             <BlogPostHeader post={data.post} />
@@ -16,14 +16,14 @@ const BlogPost = ({ data }: any) => {
                dangerouslySetInnerHTML={{ __html: data.post.content }}
             />
          </article>
-      </>
+      </section>
    )
 }
 
 const BlogPostHeader = ({ post }: { post: BlogType }) => {
    return (
       <div className="relative rounded-xl overflow-hidden h-[30vh]">
-         <time className="absolute z-50 top-2 left-2 text-white font-bold text-sm">
+         <time className="absolute z-40 top-2 left-2 text-white font-bold text-sm">
             {post.date}
          </time>
          <div className="z-40 absolute inset-0 flex items-center justify-center">

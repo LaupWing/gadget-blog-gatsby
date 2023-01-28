@@ -3,9 +3,9 @@ import BreadCrumbs from "../components/BreadCrumbs"
 
 const PageTemplate = () => {
    return (
-      <main className="container">
+      <section className="container">
          <BreadCrumbs/>
-      </main>
+      </section>
    )
 }
 export default PageTemplate

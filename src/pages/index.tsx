@@ -5,10 +5,10 @@ import Seo from "../components/Seo"
 import Slideshow from "../components/Slideshow/Slideshow"
 
 const IndexPage = () => (
-   <>
+   <section>
       <Slideshow/>
       <LatestBlogs/>
-   </>
+   </section>
 )
 
 /**
