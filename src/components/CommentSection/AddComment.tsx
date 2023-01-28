@@ -16,6 +16,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
       formState: {
          errors
       },
+      reset,
       handleSubmit
    }= useForm<FormData>({
       defaultValues:{
@@ -25,7 +26,7 @@ const AddComment = ({ post, reply, setReply }: any) => {
       }
    })
 
-   const onSubmit = handleSubmit(form => {
+   const onSubmit = handleSubmit(async form => {
       const data = JSON.stringify(reply ? {
          post: post.databaseId,
          author_name: form.name,
@@ -40,16 +41,19 @@ const AddComment = ({ post, reply, setReply }: any) => {
          author_url: form.website,
          content: form.comment,
       })
-      toast.info("We need to approve this comment first! Please be patience!")
-      // Store.addNotification({
-      //    title: "Info",
-      //    message: "We need to approve this comment first! Please be patients!",
-      //    type: "info",
-      //    insert: "top",
-      //    container: "top-center",
-      //    animationIn: ["animate__animated", "animate__fadeIn"],
-      //    animationOut: ["animate__animated", "animate__fadeOut"],
-      // })
+      try{
+         await fetch("https://tech-heaven.laupwing.site/wp-json/wp/v2/comments", {
+            method: "post",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: data,
+         })
+         reset()
+         toast.info("We need to approve this comment first! Please be patience!")
+      }catch(e){
+         toast.error("Comment failed to post! We will work on it")
+      }
    })
    return (
       <form
