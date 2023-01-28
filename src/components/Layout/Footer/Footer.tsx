@@ -6,7 +6,6 @@ import { Link } from "gatsby"
 const Footer = () => {
    const menu = useMenuQuery()
    const location = useLocation()
-   console.log(menu)
    const isBlog = (item: string) =>
       item.includes("blog") && location.pathname.includes("blog")
    return (
@@ -35,10 +34,6 @@ const Footer = () => {
                <p className="text-sm text-neutral-500">
                   © {new Date().getFullYear()} Tech Heaven. All rights reserved
                </p>
-            </div>
-            <div className="flex sm:mt-0 mt-2 items-center text-neutral-600 space-x-5">
-               {/* <AiFillInstagram size={24}/>
-               <AiFillYoutube size={24}/> */}
             </div>
          </div>
       </footer>
