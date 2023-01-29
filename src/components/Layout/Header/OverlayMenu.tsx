@@ -11,8 +11,10 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
 
    return (
       <div
-         className={`fixed flex flex-col top-0 left-0 bottom-0 w-4/5 z-50 bg-neutral-800 overflow-hidden duration-500 p-2 sm:hidden transform ${
-            showOverlay ? "" : "-translate-x-full"
+         className={`fixed flex flex-col top-0 left-0 bottom-0 border-r-2 border-black w-4/5 z-50 bg-white overflow-hidden duration-500 p-2 sm:hidden transform ${
+            showOverlay 
+               ? "" 
+               : "-translate-x-full"
          }`}
       >
          <IoClose
@@ -21,7 +23,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
             onClick={() => setShowOverlay(false)}
          />
          <nav className="m-auto">
-            <ul className="flex text-neutral-100 uppercase text-lg font-bold space-y-4 tracking-wider flex-col">
+            <ul className="flex text-neutral-900 uppercase text-lg font-bold space-y-4 tracking-wider flex-col">
                {menu.map(
                   (item:any) =>
                      !item.parentId && (
@@ -32,10 +34,12 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                            <Link
                               onClick={() => setShowOverlay(false)}
                               to={item.url}
-                              className={`flex items-center hover:text-indigo-600 relative py-1 ${
-                                 isBlog(item.url) ? "text-indigo-600" : ""
+                              className={`flex items-center relative py-1 ${
+                                 isBlog(item.url) 
+                                    ? "text-violet-600" 
+                                    : ""
                               }`}
-                              activeClassName="text-indigo-600"
+                              activeClassName="text-violet-600"
                            >
                               <li>{item.label}</li>
                            </Link>
