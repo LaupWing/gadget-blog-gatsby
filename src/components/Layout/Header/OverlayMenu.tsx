@@ -31,25 +31,22 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                      (item:any) =>
                         !item.parentId && (
                            <div
-                              className="flex items-center justify-between"
+                              className={"flex items-center justify-between " + (
+                                 isBlog(item.url) 
+                                    ? "text-violet-600" 
+                                    : ""
+                              )}
                               key={item.id}
                            >
                               <Link
                                  onClick={() => setShowOverlay(false)}
                                  to={item.url}
-                                 className={`flex items-center relative py-1 ${
-                                    isBlog(item.url) 
-                                       ? "text-violet-600" 
-                                       : ""
-                                 }`}
+                                 className="flex items-center relative py-1"
                                  activeClassName="text-violet-600"
                               >
                                  <li>{item.label}</li>
                               </Link>
-                              {item.url.includes("blog") && <FiChevronDown 
-                                 className="duration-200 ml-6 transform group-hover:rotate-180"
-                                 size={24}
-                              />}
+                              
                            </div>
                         )
                   )}
