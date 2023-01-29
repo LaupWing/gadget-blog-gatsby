@@ -22,7 +22,7 @@ interface Props {
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
    return (
       <>
-         <div className="relative">
+         <div className="relative py-6">
             <StaticImage
                src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                placeholder="tracedSVG"

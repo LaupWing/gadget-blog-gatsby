@@ -9,7 +9,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
    const menu = useMenuQuery()
    const location = useLocation()
    const isBlog = (item: string) => item.includes("blog") && location.pathname.includes("blog")
-   console.log(location)
+
    return (
       <>
          {showOverlay && <div className="bg-black/50 fixed inset-0 z-50"/>}
