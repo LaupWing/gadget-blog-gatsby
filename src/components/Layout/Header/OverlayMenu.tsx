@@ -33,7 +33,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                               onClick={() => setShowOverlay(false)}
                               to={item.url}
                               className={`flex items-center hover:text-indigo-600 relative py-1 ${
-                                 isBlog(item) ? "text-indigo-600" : ""
+                                 isBlog(item.url) ? "text-indigo-600" : ""
                               }`}
                               activeClassName="text-indigo-600"
                            >
