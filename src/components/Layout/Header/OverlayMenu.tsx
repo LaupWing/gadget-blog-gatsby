@@ -1,6 +1,7 @@
 import { useLocation } from "@gatsbyjs/reach-router"
 import { Link } from "gatsby"
 import React from "react"
+import { FiChevronDown } from "react-icons/fi"
 import { IoClose } from "react-icons/io5"
 import useMenuQuery from "../../../hooks/useMenuQuery"
 
@@ -45,6 +46,10 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                               >
                                  <li>{item.label}</li>
                               </Link>
+                              {item.url.includes("blog") && <FiChevronDown 
+                                 className="duration-200 ml-6 transform group-hover:rotate-180"
+                                 size={24}
+                              />}
                            </div>
                         )
                   )}
