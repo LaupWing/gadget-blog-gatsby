@@ -23,7 +23,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay, location }: any) => {
          <nav className="m-auto">
             <ul className="flex text-neutral-100 uppercase text-lg font-bold space-y-4 tracking-wider flex-col">
                {menu.map(
-                  item =>
+                  (item:any) =>
                      !item.parentId && (
                         <div
                            className="flex items-center justify-between"

@@ -1,7 +1,6 @@
 import * as React from "react"
 import { BiMenu } from "react-icons/bi"
 import Logo from "../../Logo"
-// import Logo from "./Logo"
 import Navigation from "./Navigation/Navigation"
 
 const Header = () => {
