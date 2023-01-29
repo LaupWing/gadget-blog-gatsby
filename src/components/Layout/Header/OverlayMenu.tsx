@@ -1,13 +1,13 @@
+import { useLocation } from "@gatsbyjs/reach-router"
 import { Link } from "gatsby"
 import React from "react"
 import { IoClose } from "react-icons/io5"
-import { useMenuQuery } from "../../../hooks/useMenuQuery"
+import useMenuQuery from "../../../hooks/useMenuQuery"
 
-const OverlayMenu = ({ setShowOverlay, showOverlay, location }: any) => {
+const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
    const menu = useMenuQuery()
-   const is_blog_or_work = item =>
-      (item.url.includes("blog") && location.pathname.includes("blog")) ||
-      (item.url.includes("work") && location.pathname.includes("work"))
+   const location = useLocation()
+   const isBlog = (item: string) => item.includes("blog") && location.pathname.includes("blog")
 
    return (
       <div
@@ -33,7 +33,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay, location }: any) => {
                               onClick={() => setShowOverlay(false)}
                               to={item.url}
                               className={`flex items-center hover:text-indigo-600 relative py-1 ${
-                                 is_blog_or_work(item) ? "text-indigo-600" : ""
+                                 isBlog(item) ? "text-indigo-600" : ""
                               }`}
                               activeClassName="text-indigo-600"
                            >
