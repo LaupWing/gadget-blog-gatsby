@@ -9,7 +9,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
    const menu = useMenuQuery()
    const location = useLocation()
    const isBlog = (item: string) => item.includes("blog") && location.pathname.includes("blog")
-
+   console.log(location)
    return (
       <>
          {showOverlay && <div className="bg-black/50 fixed inset-0 z-50"/>}
@@ -47,7 +47,24 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                                  <li>{item.label}</li>
                               </Link>
                               {item.childItems.nodes.length > 0 && (
-                                 <div>Yes</div>
+                                 <ul className="flex flex-col text-base space-y-2">
+                                    {item.childItems.nodes.map((x:any) => (
+                                       <Link 
+                                          to={x.url}
+                                          key={x.id}
+                                          onClick={() => setShowOverlay(false)}
+                                       >
+                                          <li
+                                             className={location.pathname === x.url 
+                                                ? "text-violet-500"
+                                                : "text-neutral-900"
+                                             }
+                                          >
+                                             - {x.label}
+                                          </li>
+                                       </Link>
+                                    ))}
+                                 </ul>
                               )}
                            </div>
                         )
