@@ -31,7 +31,7 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                      (item:any) =>
                         !item.parentId && (
                            <div
-                              className={"flex items-center justify-between " + (
+                              className={"flex flex-col " + (
                                  isBlog(item.url) 
                                     ? "text-violet-600" 
                                     : ""
@@ -46,7 +46,9 @@ const OverlayMenu = ({ setShowOverlay, showOverlay }: any) => {
                               >
                                  <li>{item.label}</li>
                               </Link>
-                              
+                              {item.childItems.nodes.length > 0 && (
+                                 <div>Yes</div>
+                              )}
                            </div>
                         )
                   )}
