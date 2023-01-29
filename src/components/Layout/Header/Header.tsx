@@ -14,7 +14,7 @@ const Header = () => {
                <div
                   className={`text-neutral-900 flex items-center`}
                >
-                  <BiMenu className="mr-2 sm:hidden" size={25} />
+                  <BiMenu onClick={()=> setShowOverlay(true)} className="mr-2 sm:hidden" size={25} />
                   <Logo />
                </div>
                <nav className="sm:flex hidden">
