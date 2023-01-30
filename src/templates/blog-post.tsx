@@ -22,13 +22,14 @@ interface Props {
 const BlogPost:React.FC<Props> = ({data, pageContext}) => {
    return (
       <>
-         <div className="relative py-6">
+         <div className="relative">
             <StaticImage
                src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                placeholder="tracedSVG"
                width={1920}
                height={300}
                alt="Blog Hero"
+               className="py-6"
             />
             <div className="absolute inset-0 flex items-center justify-center flex-1 bg-white/60 backdrop-blur-sm z-20">
                <h2 className="uppercase text-2xl text-center bg-green-300 p-2 rounded-xl shadow-hard-base font-bold px-4 border-2 border-black tracking-wider flex">

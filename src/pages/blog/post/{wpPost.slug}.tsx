@@ -31,7 +31,7 @@ const BlogPostHeader = ({ post }: { post: BlogType }) => {
          <time className="absolute z-40 top-2 left-2 text-white font-bold text-sm">
             {post.date}
          </time>
-         <div className="z-40 absolute inset-0 flex items-center justify-center">
+         <div className="z-30 absolute inset-0 flex items-center justify-center">
             <h1 className="text-neutral-900 bg-emerald-300 border-2 border-black px-8 py-4 rounded-xl uppercase font-bold tracking-wider text-xl shadow-hard-base">
                {post.title}
             </h1>
