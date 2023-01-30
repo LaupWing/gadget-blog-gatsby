@@ -6,14 +6,16 @@ import Slide1 from "./Slide1"
 const Slideshow = () => {
    return (
       <div className="relative">
-         <StaticImage
-            src="../../images/pattern.png"
-            placeholder="blurred"
-            quality={95}
-            loading="eager"
-            className="absolute opacity-20 inset-0 w-full h-full object-cover"
-            alt="Blog Hero"
-         />
+         <div className="absolute inset-0">
+            <StaticImage
+               src="../../images/pattern.png"
+               placeholder="blurred"
+               quality={95}
+               loading="eager"
+               className="absolute opacity-20 inset-0 w-full h-full object-cover"
+               alt="Blog Hero"
+            />
+         </div>
          <Carousel 
             showThumbs={false}
             showStatus={false}
