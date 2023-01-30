@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 
 const UsingDSG = () => (
    <Layout>

@@ -1,7 +1,7 @@
 import * as React from "react"
 import LatestBlogs from "../components/LatestBlogs/LatestBlogs"
 
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 import Slideshow from "../components/Slideshow/Slideshow"
 
 const IndexPage = () => (
