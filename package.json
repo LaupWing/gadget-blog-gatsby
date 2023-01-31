@@ -8,6 +8,7 @@
     "@gatsbyjs/reach-router": "^2.0.0",
     "boring-avatars": "^1.7.0",
     "gatsby": "^5.4.2",
+    "gatsby-plugin-gatsby-cloud": "^5.5.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.4.0",
     "gatsby-plugin-layout": "^4.4.0",

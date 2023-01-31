@@ -45,6 +45,13 @@ const config: GatsbyConfig  = {
          },
       },
       {
+         resolve: `gatsby-plugin-gatsby-cloud`,
+         options: {
+           mergeLinkHeaders: true,
+           mergeCachingHeaders: true
+         },
+       },
+      {
          resolve: `gatsby-source-wordpress`,
          options: {
             url: `https://tech-heaven.laupwing.site/graphql`
